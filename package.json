@@ -1,0 +1,17 @@
+{
+	"name": "advent-of-code-2018",
+	"version": "1.0.0",
+	"repository": "https://github.com/koenvanzuijlen/advent-of-code-2018.git",
+	"author": "koenvanzuijlen <khavanzuijlen@gmail.com>",
+	"license": "MIT",
+	"main": "index.js",
+	"scripts": {
+		"run": "node index.js"
+	},
+	"devDependencies": {
+		"prettier": "^1.15.3"
+	},
+	"dependencies": {
+		"chalk": "^2.4.1"
+	}
+}
