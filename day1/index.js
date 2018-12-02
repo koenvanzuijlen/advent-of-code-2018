@@ -28,10 +28,8 @@ module.exports = (half = 1) => {
 				if (!isNaN(frequencyChange)) {
 					frequency += frequencyChange;
 					if(frequenciesSeen.indexOf(frequency) === -1) {
-						//Not seen yet
 						frequenciesSeen.push(frequency);						
 					} else {
-						//Found the first repeating frequency
 						return console.log(chalk.blue(`First repeated frequency: ${frequency}`));
 					}
 				}
