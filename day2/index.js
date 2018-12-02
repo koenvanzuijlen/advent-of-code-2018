@@ -35,9 +35,36 @@ module.exports = (half = 1) => {
 
 		return console.log(
 			chalk.blue(
-				`Checksum: ${boxesWithDoubleLetters * boxesWithTripleLetters}`,
+				`Box ID Checksum: ${boxesWithDoubleLetters * boxesWithTripleLetters}`,
 			),
 		);
 	} else if (half === 2) {
+		const idLength = input[0].length;
+		let matchingChars;
+		input.find(input1 => {
+			return input.find(input2 => {
+				let count = 0;
+				let differentChars = 0;
+				matchingChars = [];
+				while(count < idLength) {
+					if(input1.charAt(count) !== input2.charAt(count)) {
+						differentChars++;
+						if(differentChars > 1) {
+							return false;
+						}
+					} else {						
+						matchingChars.push(input1.charAt(count));
+					}
+					count++;
+				}
+				if(differentChars === 1) {
+					console.log(input1);
+					console.log(input2);
+				}
+				return differentChars === 1;
+			});
+		});
+
+		console.log(chalk.blue(`Correct Box ID letters: ${matchingChars.join("")}`));
 	}
 };
