@@ -46,13 +46,13 @@ module.exports = (half = 1) => {
 				let count = 0;
 				let differentChars = 0;
 				matchingChars = [];
-				while(count < idLength) {
-					if(input1.charAt(count) !== input2.charAt(count)) {
+				while (count < idLength) {
+					if (input1.charAt(count) !== input2.charAt(count)) {
 						differentChars++;
-						if(differentChars > 1) {
+						if (differentChars > 1) {
 							return false;
 						}
-					} else {						
+					} else {
 						matchingChars.push(input1.charAt(count));
 					}
 					count++;
@@ -61,6 +61,8 @@ module.exports = (half = 1) => {
 			});
 		});
 
-		console.log(chalk.blue(`Correct Box ID letters: ${matchingChars.join("")}`));
+		return console.log(
+			chalk.blue(`Correct Box ID letters: ${matchingChars.join("")}`),
+		);
 	}
 };

@@ -17,23 +17,24 @@ module.exports = (half = 1) => {
 		});
 
 		return console.log(chalk.blue(`Frequency: ${frequency}`));
-	
 	} else if (half === 2) {
 		let frequency = 0;
 		const frequenciesSeen = [];
 
-		while(true) {
-			for(let frequencyChange of input) {
+		while (true) {
+			for (let frequencyChange of input) {
 				frequencyChange = parseInt(frequencyChange);
 				if (!isNaN(frequencyChange)) {
 					frequency += frequencyChange;
-					if(frequenciesSeen.indexOf(frequency) === -1) {
-						frequenciesSeen.push(frequency);						
+					if (frequenciesSeen.indexOf(frequency) === -1) {
+						frequenciesSeen.push(frequency);
 					} else {
-						return console.log(chalk.blue(`First repeated frequency: ${frequency}`));
+						return console.log(
+							chalk.blue(`First repeated frequency: ${frequency}`),
+						);
 					}
 				}
-			};
+			}
 		}
 	}
 };
