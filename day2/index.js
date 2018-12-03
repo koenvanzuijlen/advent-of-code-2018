@@ -57,10 +57,6 @@ module.exports = (half = 1) => {
 					}
 					count++;
 				}
-				if(differentChars === 1) {
-					console.log(input1);
-					console.log(input2);
-				}
 				return differentChars === 1;
 			});
 		});
